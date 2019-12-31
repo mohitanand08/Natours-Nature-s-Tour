@@ -2,7 +2,7 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
-// Importing Base Files 
+// Importing Base Files
 @import "base/animations";
 @import "base/base";
 @import "base/topography";
@@ -12,8 +12,8 @@
 // Importing Component Files
 @import "components/button";
 @import "components/composition";
+@import "components/feature_box";
 
 // Importing Layouts Files
 @import "layouts/header";
 @import "layouts/grid";
-
