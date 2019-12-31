@@ -1,4 +1,4 @@
-.btn{
+.btn {
 	&:link,
 	&:visited {
 		text-transform: uppercase;
@@ -17,7 +17,6 @@
 			transform: scaleX(1.4) scaleY(1.6);
 			opacity: 0;
 		}
-	
 	}
 	&:active {
 		transform: translate(-1px);
@@ -29,6 +28,13 @@
 		color: $color-grey-dark;
 		&:after {
 			background-color: $color-white;
+		}
+	}
+	&-green {
+		background-color: $color-primary;
+		color: $color-white;
+		&:after {
+			background-color: $color-primary;
 		}
 	}
 
@@ -71,4 +77,3 @@
 		transform: translate(0);
 	}
 }
-
