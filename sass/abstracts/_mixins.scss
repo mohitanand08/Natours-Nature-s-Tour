@@ -12,3 +12,46 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+// Media Query Code
+/*
+0-600px for phone
+600-900px for Tablet 
+900-1200px for tablet landscape 
+1200-1800px for Laptop (Normal style)
+1800+ px for big desktop
+*/
+/*
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+ORDER :
+Base : typography > general layout > grid > page layout > components
+1em = 16px
+best practice to use for media queries
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {
+			@content;
+		} //600px
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) {
+			@content;
+		} //900px
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {
+			@content;
+		} //1200px
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112em) {
+			@content;
+		} //1800px
+	}
+}
