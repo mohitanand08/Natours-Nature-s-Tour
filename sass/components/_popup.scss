@@ -46,10 +46,20 @@
 		opacity: 0;
 		transform: translate(-50%, -50%) scale(.5);
 		transition: all .4s .2s;
+		@include respond(tab-land) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 	}
 	&__left {
 		width: 33.33%;
 		display: table-cell;
+		@include respond(tab-land) {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
 	}
 	&__right {
 		width: 66.67%;
@@ -59,10 +69,18 @@
 		&__btn {
 			margin-top: 0;
 		}
+		@include respond(tab-land) {
+			width: 100%;
+		}
 	}
 	&__img {
 		display: block;
 		width: 100%;
+		@include respond(tab-land) {
+			width: 40%;
+			height: 20vh;
+			margin-bottom: 4rem;
+		}
 	}
 	&__text {
 		font-size: 1.4rem;
